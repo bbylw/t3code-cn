@@ -29,24 +29,26 @@
     "PingFang SC", "Microsoft YaHei", monospace;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
 
-::selection {
-  background-color: var(--color-emerald-500);
-  color: var(--color-zinc-950);
-}
+  ::selection {
+    background-color: var(--color-emerald-500);
+    color: var(--color-zinc-950);
+  }
 
-:focus-visible {
-  outline: 2px solid var(--color-emerald-600);
-  outline-offset: 3px;
-  border-radius: 4px;
+  :focus-visible {
+    outline: 2px solid var(--color-emerald-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 }
 
 @keyframes caret-blink {

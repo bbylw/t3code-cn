@@ -33,7 +33,7 @@ const ICONS: Record<DocIconKind, Icon> = {
 
 export default function Docs() {
   return (
-    <section id="docs" className="scroll-mt-20">
+    <section id="docs" tabIndex={-1} className="scroll-mt-20 focus:outline-none">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
         <Reveal>
           <h2 className="text-3xl font-bold tracking-tighter text-zinc-900 md:text-4xl dark:text-zinc-50">

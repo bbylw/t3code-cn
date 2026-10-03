@@ -1,0 +1,96 @@
+<!doctype html>
+<!--
+  og:image 源文件：用 headless Chromium 以 1200×630 视口截图生成 public/og.png
+  （playwright newContext({ viewport: { width: 1200, height: 630 } }) + page.screenshot）。
+  改文案/配色后重新截图即可，不要用 AI 生图（中文会画乱）。
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { margin: 0; box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; }
+      body {
+        position: relative;
+        overflow: hidden;
+        background: #09090b;
+        color: #fafafa;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .grid-bg {
+        position: absolute; inset: 0;
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 44px 44px;
+        -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, #000 30%, transparent 75%);
+        mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, #000 30%, transparent 75%);
+      }
+      .glow {
+        position: absolute; top: -160px; left: 50%; transform: translateX(-50%);
+        width: 672px; height: 320px; border-radius: 9999px;
+        background: rgba(16, 185, 129, 0.12); filter: blur(120px);
+      }
+      .wrap {
+        position: relative; height: 100%;
+        padding: 56px 72px;
+        display: flex; flex-direction: column; justify-content: space-between;
+      }
+      .eyebrow {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 20px; letter-spacing: 0.22em; color: #34d399;
+      }
+      h1 { margin-top: 18px; font-size: 64px; line-height: 1.12; letter-spacing: -0.02em; font-weight: 700; }
+      .sub { margin-top: 18px; font-size: 24px; line-height: 1.55; color: #a1a1aa; max-width: 46ch; }
+      .row { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; }
+      .term { width: 470px; flex: none; border: 1px solid #27272a; border-radius: 12px; background: #0c0c0e; overflow: hidden; }
+      .term-bar { display: flex; align-items: center; gap: 8px; padding: 11px 16px; border-bottom: 1px solid rgba(39, 39, 42, 0.8); }
+      .dot { width: 10px; height: 10px; border-radius: 9999px; background: #3f3f46; }
+      .term-title { margin-left: 6px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; color: #71717a; }
+      .term-body { padding: 14px 18px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; line-height: 1.85; }
+      .cmd { color: #fafafa; }
+      .out { color: #a1a1aa; }
+      .p { color: #34d399; margin-right: 8px; }
+      .foot { display: flex; align-items: center; gap: 14px; padding-bottom: 6px; }
+      .logo {
+        width: 44px; height: 44px; border-radius: 10px; background: #10b981; color: #09090b;
+        display: flex; align-items: center; justify-content: center;
+        font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 18px; font-weight: 700;
+      }
+      .name { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+      .url { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 18px; color: #71717a; }
+    </style>
+  </head>
+  <body>
+    <div class="grid-bg"></div>
+    <div class="glow"></div>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">T3 CODE · AGENT HARNESS</p>
+        <h1>一部手机，<br />调度所有智能体</h1>
+        <p class="sub">远程操控你电脑上的 Claude Code、Codex、Cursor、Grok Build、OpenCode 与 Antigravity。</p>
+      </div>
+      <div class="row">
+        <div class="foot">
+          <span class="logo">T3</span>
+          <span class="name">T3 Code 中文介绍页</span>
+          <span class="url">t3code.ndjp.net</span>
+        </div>
+        <div class="term">
+          <div class="term-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="term-title">终端 · 首次运行</span>
+          </div>
+          <div class="term-body">
+            <p class="cmd"><span class="p">$</span>curl -fsSL https://t3.codes/install.sh | sh</p>
+            <p class="out">✓ t3 已安装</p>
+            <p class="cmd"><span class="p">$</span>t3</p>
+            <p class="out">✓ 已接管 Claude Code · Codex</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -14,7 +14,8 @@ export default function Install() {
   return (
     <section
       id="install"
-      className="scroll-mt-20 border-y border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40"
+      tabIndex={-1}
+      className="scroll-mt-20 border-y border-zinc-200 bg-zinc-50 focus:outline-none dark:border-zinc-800 dark:bg-zinc-900/40"
     >
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
         <Reveal>
