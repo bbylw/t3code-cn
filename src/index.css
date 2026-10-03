@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * 形状规范（全站锁定）：
+ * - 按钮：一律全胶囊（rounded-full）
+ * - 卡片：一律 16px（rounded-2xl）
+ * - 终端 / 代码块：一律 12px（rounded-xl）
+ * - 小徽标 / 芯片：一律全胶囊
+ * - 例外：导航品牌标识为几何方块（rounded-lg），图标按钮为圆形
+ *
+ * 层级规范：全站只用一处 sticky 导航（z-40），无弹窗无遮罩。
+ *
+ * 色彩规范（全站锁定）：
+ * - 中性基：zinc；唯一点缀色：emerald（信号绿）
+ * - 深色底不用纯黑（zinc-950），浅色底不用纯白文字
+ */
+
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", sans-serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "PingFang SC", "Microsoft YaHei", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-emerald-500);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-emerald-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@keyframes caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret-blink {
+  animation: caret-blink 1.1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .caret-blink {
+    animation: none;
+  }
+}

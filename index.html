@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="T3 Code 是一个智能体调度控制面板。通过手机 App、网页 App 与桌面端，远程操控你电脑上的 Claude Code、Codex、Cursor、Grok Build、OpenCode 与 Antigravity。"
+    />
+    <meta name="theme-color" content="#09090b" />
+    <title>T3 Code — 智能体调度控制面板</title>
+    <script>
+      try {
+        var saved = localStorage.getItem("t3-theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (saved === "light" || (saved !== "dark" && prefersLight)) {
+          document.documentElement.classList.remove("dark");
+        } else {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
