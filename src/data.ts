@@ -165,10 +165,23 @@ export const DESKTOP_OPTIONS: DesktopOption[] = [
   },
 ];
 
+export type DocIconKind =
+  | "rocket"
+  | "shield"
+  | "keyboard"
+  | "gear"
+  | "palette"
+  | "mobile"
+  | "sync"
+  | "git"
+  | "users"
+  | "server"
+  | "hammer";
+
 export interface DocLink {
   name: string;
   href: string;
-  icon: string;
+  icon: DocIconKind;
 }
 
 export interface DocGroup {
@@ -201,7 +214,7 @@ export const DOC_GROUPS: DocGroup[] = [
   },
 ];
 
-export const VP_BLOCKS: InstallBlock[] = [
+export const VP_INSTALL_BLOCKS: InstallBlock[] = [
   {
     label: "macOS / Linux",
     code: "curl -fsSL https://vite.plus | bash",

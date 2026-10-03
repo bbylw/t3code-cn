@@ -31,8 +31,7 @@ export default function Platforms() {
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:py-28">
         <div className="lg:col-span-5">
-          <div className="lg:sticky lg:top-24">
-            <Reveal>
+          <Reveal>
               <h2 className="text-3xl font-bold tracking-tighter text-zinc-900 md:text-4xl dark:text-zinc-50">
                 口袋里装下
                 <br />
@@ -51,7 +50,6 @@ export default function Platforms() {
                 <ArrowUpRight size={15} weight="bold" />
               </a>
             </Reveal>
-          </div>
         </div>
 
         <div className="lg:col-span-7">

@@ -1,9 +1,12 @@
 import { ArrowUpRight, DiscordLogo } from "@phosphor-icons/react";
-import { CONTRIBUTING, DISCORD, IDEAS, REPO, VP_BLOCKS } from "../data.ts";
+import { CONTRIBUTING, DISCORD, IDEAS, REPO, VP_INSTALL_BLOCKS } from "../data.ts";
 import CodeBlock from "./CodeBlock.tsx";
 import Reveal from "./Reveal.tsx";
 
 const GUIDE_URL = "https://viteplus.dev/guide/";
+
+const ACTION_LINK_CLASS =
+  "inline-flex items-center gap-1.5 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-emerald-500 hover:text-emerald-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-emerald-500 dark:hover:text-emerald-400";
 
 export default function Community() {
   return (
@@ -28,7 +31,7 @@ export default function Community() {
               href={CONTRIBUTING}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-emerald-500 hover:text-emerald-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-emerald-500 dark:hover:text-emerald-400"
+              className={ACTION_LINK_CLASS}
             >
               贡献指南
               <ArrowUpRight size={14} weight="bold" />
@@ -37,7 +40,7 @@ export default function Community() {
               href={IDEAS}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-emerald-500 hover:text-emerald-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-emerald-500 dark:hover:text-emerald-400"
+              className={ACTION_LINK_CLASS}
             >
               Ideas 讨论区
               <ArrowUpRight size={14} weight="bold" />
@@ -46,7 +49,7 @@ export default function Community() {
               href={DISCORD}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-emerald-500 hover:text-emerald-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-emerald-500 dark:hover:text-emerald-400"
+              className={ACTION_LINK_CLASS}
             >
               <DiscordLogo size={16} />
               Discord
@@ -59,7 +62,7 @@ export default function Community() {
             想从源码构建，先安装 vp 工具
           </h3>
           <div className="mt-4 space-y-4">
-            {VP_BLOCKS.map((block) => (
+            {VP_INSTALL_BLOCKS.map((block) => (
               <CodeBlock key={block.label} label={block.label} code={block.code} />
             ))}
           </div>

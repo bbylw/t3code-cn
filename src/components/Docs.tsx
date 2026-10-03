@@ -14,9 +14,10 @@ import {
 } from "@phosphor-icons/react";
 import type { Icon } from "@phosphor-icons/react";
 import { DOC_GROUPS } from "../data.ts";
+import type { DocIconKind } from "../data.ts";
 import Reveal from "./Reveal.tsx";
 
-const ICONS: Record<string, Icon> = {
+const ICONS: Record<DocIconKind, Icon> = {
   rocket: RocketLaunch,
   shield: ShieldCheck,
   keyboard: Keyboard,
@@ -53,7 +54,7 @@ export default function Docs() {
                 </h3>
                 <div className="mt-4 overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/60">
                   {group.links.map((link) => {
-                    const DocIcon = ICONS[link.icon] ?? RocketLaunch;
+                    const DocIcon = ICONS[link.icon];
                     return (
                       <a
                         key={link.name}
