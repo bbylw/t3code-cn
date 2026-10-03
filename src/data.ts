@@ -15,7 +15,8 @@ export interface Agent {
   name: string;
   vendor: string;
   mono: string;
-  command: string;
+  command: string | null;
+  uiStep?: string;
   note: string;
 }
 
@@ -59,8 +60,9 @@ export const AGENTS: Agent[] = [
     name: "Antigravity",
     vendor: "Google",
     mono: "An",
-    command: "设置中启用",
-    note: "在设置中启用并用 Google 账号登录，无需安装 CLI。",
+    command: null,
+    uiStep: "设置 → 安装 Antigravity → Google 登录",
+    note: "无需安装 CLI，在 T3 Code 设置中启用即可接管。",
   },
 ];
 

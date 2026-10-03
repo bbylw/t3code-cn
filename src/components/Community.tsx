@@ -6,7 +6,7 @@ import Reveal from "./Reveal.tsx";
 const GUIDE_URL = "https://viteplus.dev/guide/";
 
 const ACTION_LINK_CLASS =
-  "inline-flex items-center gap-1.5 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-emerald-500 hover:text-emerald-600 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-emerald-500 dark:hover:text-emerald-400";
+  "inline-flex items-center gap-1.5 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-emerald-500 hover:text-emerald-700 dark:border-zinc-700 dark:text-zinc-300 dark:hover:border-emerald-500 dark:hover:text-emerald-400";
 
 export default function Community() {
   return (
@@ -58,7 +58,7 @@ export default function Community() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <h3 className="text-sm font-semibold tracking-wide text-zinc-500 dark:text-zinc-500">
+          <h3 className="text-sm font-semibold tracking-wide text-zinc-500 dark:text-zinc-400">
             想从源码构建，先安装 vp 工具
           </h3>
           <div className="mt-4 space-y-4">
@@ -72,7 +72,7 @@ export default function Community() {
               href={GUIDE_URL}
               target="_blank"
               rel="noreferrer"
-              className="mx-1 text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300"
+              className="mx-1 text-emerald-700 hover:text-emerald-800 dark:text-emerald-400 dark:hover:text-emerald-300"
             >
               入门指南
             </a>
@@ -81,7 +81,7 @@ export default function Community() {
               href={`${REPO}/blob/main/docs/internals/overview.md`}
               target="_blank"
               rel="noreferrer"
-              className="mx-1 font-mono text-[13px] text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300"
+              className="mx-1 font-mono text-[13px] text-emerald-700 hover:text-emerald-800 dark:text-emerald-400 dark:hover:text-emerald-300"
             >
               docs/internals/overview.md
             </a>

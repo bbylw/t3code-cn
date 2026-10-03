@@ -49,7 +49,7 @@ export default function Docs() {
           {DOC_GROUPS.map((group, gi) => (
             <Reveal key={group.title} delay={gi * 0.08}>
               <div>
-                <h3 className="text-sm font-semibold tracking-wide text-zinc-500 dark:text-zinc-500">
+                <h3 className="text-sm font-semibold tracking-wide text-zinc-500 dark:text-zinc-400">
                   {group.title}
                 </h3>
                 <div className="mt-4 overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/60">

@@ -62,7 +62,7 @@ export default function Footer() {
                         {...(external
                           ? { target: "_blank", rel: "noreferrer" }
                           : {})}
-                        className="text-sm text-zinc-600 transition-colors hover:text-emerald-600 dark:text-zinc-400 dark:hover:text-emerald-400"
+                        className="text-sm text-zinc-600 transition-colors hover:text-emerald-700 dark:text-zinc-400 dark:hover:text-emerald-400"
                       >
                         {link.label}
                       </a>
@@ -73,7 +73,7 @@ export default function Footer() {
             </nav>
           ))}
         </div>
-        <div className="mt-12 flex flex-col gap-2 border-t border-zinc-200 pt-6 text-[13px] text-zinc-500 sm:flex-row sm:items-center sm:justify-between dark:border-zinc-800 dark:text-zinc-500">
+        <div className="mt-12 flex flex-col gap-2 border-t border-zinc-200 pt-6 text-[13px] text-zinc-500 sm:flex-row sm:items-center sm:justify-between dark:border-zinc-800 dark:text-zinc-400">
           <p>© 2026 T3 Code 中文介绍页</p>
           <p>内容整理自公开 README，仅供学习交流，非官方站点。</p>
         </div>

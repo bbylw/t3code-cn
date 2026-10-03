@@ -31,7 +31,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="font-mono text-xs tracking-[0.22em] text-emerald-600 dark:text-emerald-400">
+          <p className="font-mono text-xs tracking-[0.22em] text-emerald-700 dark:text-emerald-400">
             T3 CODE · AGENT HARNESS
           </p>
           <h1 className="mt-5 text-4xl font-bold leading-[1.15] tracking-tighter text-zinc-900 md:text-5xl lg:text-6xl dark:text-zinc-50">
@@ -72,7 +72,7 @@ export default function Hero() {
               <span className="h-3 w-3 rounded-full bg-zinc-700" />
               <span className="h-3 w-3 rounded-full bg-zinc-700" />
               <span className="h-3 w-3 rounded-full bg-zinc-700" />
-              <span className="ml-2 font-mono text-xs text-zinc-500">
+              <span className="ml-2 font-mono text-xs text-zinc-400">
                 终端 · 首次运行
               </span>
             </div>

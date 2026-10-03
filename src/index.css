@@ -15,6 +15,9 @@
  * 色彩规范（全站锁定）：
  * - 中性基：zinc；唯一点缀色：emerald（信号绿）
  * - 深色底不用纯黑（zinc-950），浅色底不用纯白文字
+ * - 点缀色文字：浅色底用 emerald-700（emerald-600 在白底只有 3.7:1，不到 AA），深色底用 emerald-400
+ * - 次要文字：浅色底 zinc-500/600，深色底一律 zinc-400（zinc-500 在 zinc-950 上只有 4.0:1）
+ * - 非文字元素（描边、focus ring、装饰箭头）可用 emerald-500，需 ≥3:1 时用 emerald-600
  */
 
 @theme {
@@ -37,11 +40,11 @@ body {
 
 ::selection {
   background-color: var(--color-emerald-500);
-  color: #fff;
+  color: var(--color-zinc-950);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-emerald-500);
+  outline: 2px solid var(--color-emerald-600);
   outline-offset: 3px;
   border-radius: 4px;
 }

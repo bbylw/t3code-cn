@@ -19,6 +19,8 @@ export function useTheme() {
     } else {
       root.classList.remove("dark");
     }
+    const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+    if (meta) meta.content = theme === "dark" ? "#09090b" : "#ffffff";
     try {
       localStorage.setItem(STORAGE_KEY, theme);
     } catch {

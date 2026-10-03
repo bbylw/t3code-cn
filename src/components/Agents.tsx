@@ -30,7 +30,7 @@ export default function Agents() {
                     <h3 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
                       {agent.name}
                     </h3>
-                    <p className="font-mono text-xs text-zinc-500 dark:text-zinc-500">
+                    <p className="font-mono text-xs text-zinc-500 dark:text-zinc-400">
                       {agent.vendor}
                     </p>
                   </div>
@@ -39,9 +39,11 @@ export default function Agents() {
                   </span>
                 </div>
                 <div className="mt-5 overflow-hidden rounded-xl bg-zinc-950 px-4 py-3">
-                  <p className="truncate font-mono text-[13px] text-zinc-100">
-                    <span className="mr-2 select-none text-emerald-400">$</span>
-                    {agent.command}
+                  <p className="font-mono text-[13px] leading-relaxed text-zinc-100">
+                    <span className="mr-2 select-none text-emerald-400">
+                      {agent.command === null ? "UI" : "$"}
+                    </span>
+                    {agent.command ?? agent.uiStep}
                   </p>
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">

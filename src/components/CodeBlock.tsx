@@ -45,7 +45,7 @@ export default function CodeBlock({ code, label }: CodeBlockProps) {
           )}
         </button>
       </div>
-      <pre className="overflow-x-auto px-4 py-3.5 font-mono text-[13px] leading-relaxed text-zinc-100">
+      <pre className="px-4 py-3.5 font-mono text-[13px] leading-relaxed whitespace-pre-wrap break-words text-zinc-100">
         <code>
           <span className="mr-2 select-none text-emerald-400">$</span>
           {code}

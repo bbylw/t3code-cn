@@ -13,7 +13,7 @@ export default function Philosophy() {
             Code，只因为我们自己想要最好的智能体开发体验：高性能、可远程操控、真正开放。万一我们走偏了，你手上掌握一切所需，随时可以
             fork 出属于你自己的编辑器。
           </p>
-          <p className="mx-auto mt-6 max-w-[60ch] text-sm leading-relaxed text-zinc-500 dark:text-zinc-500">
+          <p className="mx-auto mt-6 max-w-[60ch] text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
             这一想法深受 Codex 桌面端、Conductor、Claude Desktop 与 Cursor Glass
             的启发，只是没有一个达到我们的标准。
           </p>

@@ -18,7 +18,7 @@ export default function Install() {
     >
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
         <Reveal>
-          <p className="font-mono text-xs tracking-[0.22em] text-emerald-600 dark:text-emerald-400">
+          <p className="font-mono text-xs tracking-[0.22em] text-emerald-700 dark:text-emerald-400">
             INSTALL · 安装指南
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tighter text-zinc-900 md:text-4xl dark:text-zinc-50">
@@ -105,7 +105,7 @@ export default function Install() {
                   href={RELEASES}
                   target="_blank"
                   rel="noreferrer"
-                  className="ml-1 inline-flex items-center gap-1 font-medium text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300"
+                  className="ml-1 inline-flex items-center gap-1 font-medium text-emerald-700 hover:text-emerald-800 dark:text-emerald-400 dark:hover:text-emerald-300"
                 >
                   前往 Releases
                   <ArrowUpRight size={14} weight="bold" />
@@ -117,14 +117,14 @@ export default function Install() {
                 <CodeBlock key={block.label} label={block.label} code={block.code} />
               ))}
               {current.note && (
-                <p className="text-sm text-zinc-500 dark:text-zinc-500">
+                <p className="text-sm text-zinc-500 dark:text-zinc-400">
                   注：{current.note}。
                   {current.noteHref && (
                     <a
                       href={current.noteHref}
                       target="_blank"
                       rel="noreferrer"
-                      className="ml-1 text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300"
+                      className="ml-1 text-emerald-700 hover:text-emerald-800 dark:text-emerald-400 dark:hover:text-emerald-300"
                     >
                       查看
                     </a>
